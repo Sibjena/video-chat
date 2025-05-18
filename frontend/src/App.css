@@ -1,19 +1,18 @@
 .landingPageContainer {
   width: 100vw;
-  height: 100vh;
-  background: url("/public/background.png");
-  background-repeat: no-repeat;
+  min-height: 100vh;
+  background: url("/public/background.png") no-repeat center center;
   background-size: cover;
   color: white;
+  overflow-x: hidden;
 }
 
 .landingPageContainer nav {
-  padding-inline: 1.2rem;
-  padding-block: 1.6rem;
+  padding: 1.6rem 1.2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  flex-wrap: wrap;
 }
 
 .landingPageContainer nav h2 {
@@ -24,23 +23,26 @@
 .landingPageContainer nav .navlist {
   display: flex;
   gap: 1.6rem;
+  flex-wrap: wrap;
   cursor: pointer;
-
 }
 
 .landingMainContainer {
   display: flex;
   justify-content: space-between;
-  padding-inline: 3rem;
-  height: 80vh;
   align-items: center;
+  padding: 3rem 1.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  min-height: 80vh;
 }
 
-.landingMainContainer>div:nth-child(1) {
+.landingMainContainer > div:nth-child(1) {
+  flex: 1 1 300px;
   font-size: 2.2rem;
 }
 
-.landingMainContainer>div:nth-child(1) div[role='button'] {
+.landingMainContainer > div:nth-child(1) div[role='button'] {
   background: #D97500;
   width: fit-content;
   padding: 1rem;
@@ -48,15 +50,21 @@
   margin-top: 1.9rem;
 }
 
-.landingMainContainer>div:nth-child(1) div[role='button'] a {
+.landingMainContainer > div:nth-child(1) div[role='button'] a {
   text-decoration: none;
   color: white;
   font-size: 1.7rem;
 }
 
-.landingMainContainer>div:nth-child(2) img {
-  height: 70vh;
-  width: auto;
+.landingMainContainer > div:nth-child(2) {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.landingMainContainer > div:nth-child(2) img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
 }
 
 .navBar {
@@ -65,32 +73,36 @@
   justify-content: space-between;
   padding-inline: 20px;
   text-align: center;
-
+  flex-wrap: wrap;
 }
+
 .meetContainer {
   display: flex;
-  padding-inline: 20px;
-  height: 80vh;
-  gap: 10vw;
+  flex-wrap: wrap;
   justify-content: center;
+  padding: 2rem 20px;
+  gap: 5vw;
+  min-height: 80vh;
 }
 
-
-
 .leftPanel {
-  height: 100%;
+  flex: 1 1 300px;
   display: flex;
   align-items: center;
-
+  justify-content: center;
+  text-align: center;
 }
 
 .rightPanel {
+  flex: 1 1 300px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .rightPanel > img {
-  width: 30vw;
+  width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 20px;
 }
